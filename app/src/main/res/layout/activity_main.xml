@@ -52,5 +52,11 @@
         android:text="清除LogCatDialog"
         android:onClick="onClear"
         android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="跳转"
+        android:onClick="onStart"
+        android:layout_height="wrap_content" />
+
 
 </LinearLayout>

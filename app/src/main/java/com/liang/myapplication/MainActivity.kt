@@ -1,5 +1,6 @@
 package com.liang.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -78,6 +79,14 @@ class MainActivity : AppCompatActivity() {
      */
     fun onClear(view: View?) {
         LogCatControl.getBuilder(this).clear()
+    }
+    /**
+     * 清除dialog
+     *
+     * @param view
+     */
+    fun onStart(view: View?) {
+        startActivity(Intent(this,MainActivity2::class.java))
     }
 
     /**
