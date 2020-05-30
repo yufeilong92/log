@@ -46,7 +46,6 @@ class MainActivity2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main2)
         mContext = this
-        textView.text="${"22d".toInt()}"
         btn_throw_exception.setOnClickListener {
             throwException()
         }
