@@ -46,7 +46,7 @@
         android:background="#711b1b1b"
         android:gravity="center_vertical">
 
-        <com.zy.logcat.SearchEditText
+        <com.liang.myapplication.log.SearchEditText
             android:id="@+id/et_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

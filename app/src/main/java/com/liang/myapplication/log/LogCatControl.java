@@ -2,6 +2,8 @@ package com.liang.myapplication.log;
 
 import android.content.Context;
 
+import com.liang.myapplication.R;
+
 
 /**
  * Created by ZY on 2018/6/22.
@@ -28,7 +30,7 @@ public class LogCatControl {
     }
 
     private LogCatControl builder() {
-        catDialog = new LogCatDialog(context, com.zy.logcat.R.style.dialog);
+        catDialog = new LogCatDialog(context, R.style.dialog);
         return this;
     }
 

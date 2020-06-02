@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="calc_dialog_clear">Clear</string>
+    <string name="calc_dialog_cancel">Cancel</string>
+    <string name="calc_dialog_ok">OK</string>
+
+    <string name="calc_answer">Ans</string>
+
+    <string-array name="calc_dialog_errors">
+        <item>Division by zero</item>
+        <item>Out of bounds</item>
+        <item>Result must be positive</item>
+        <item>Result must be negative</item>
+    </string-array>
+
+    <string name="calc_dialog_erase">Erase</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -22,13 +22,13 @@ import androidx.annotation.IdRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.StyleRes;
 
+import com.liang.myapplication.R;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.zy.logcat.R;
-import com.zy.logcat.SearchEditText;
 
 class LogCatDialog extends Dialog {
 

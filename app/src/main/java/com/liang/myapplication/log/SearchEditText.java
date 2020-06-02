@@ -7,6 +7,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.liang.myapplication.R;
+
 public class SearchEditText extends LinearLayout {
 
     private ImageView ivSearch, ivOk;
@@ -22,10 +24,10 @@ public class SearchEditText extends LinearLayout {
 
     public SearchEditText(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        View view = View.inflate(context, com.zy.logcat.R.layout.search_edittext, null);
-        ivSearch = (ImageView) view.findViewById(com.zy.logcat.R.id.iv_search);
-        ivOk = (ImageView) view.findViewById(com.zy.logcat.R.id.iv_ok);
-        etContent = (EditText) view.findViewById(com.zy.logcat.R.id.et_content);
+        View view = View.inflate(context, R.layout.search_edittext, null);
+        ivSearch = (ImageView) view.findViewById(R.id.iv_search);
+        ivOk = (ImageView) view.findViewById(R.id.iv_ok);
+        etContent = (EditText) view.findViewById(R.id.et_content);
         addView(view);
         setListener();
     }

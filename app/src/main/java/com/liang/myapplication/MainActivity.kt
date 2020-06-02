@@ -5,7 +5,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.zy.logcat.LogCatControl
+import com.liang.myapplication.log.LogCatControl
+import com.liang.myapplication.log.SaveHttpLog
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        SaveHttpLog().init(this)
     }
 
     /**
@@ -80,13 +82,14 @@ class MainActivity : AppCompatActivity() {
     fun onClear(view: View?) {
         LogCatControl.getBuilder(this).clear()
     }
+
     /**
      * 清除dialog
      *
      * @param view
      */
     fun onStart(view: View?) {
-        startActivity(Intent(this,MainActivity2::class.java))
+        startActivity(Intent(this, MainActivity2::class.java))
     }
 
     /**
