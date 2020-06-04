@@ -38,4 +38,5 @@ dependencies {
     implementation 'com.google.android.material:material:1.2.0-beta01'
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'com.github.donkingliang:ImageSelector:2.2.0'
 }

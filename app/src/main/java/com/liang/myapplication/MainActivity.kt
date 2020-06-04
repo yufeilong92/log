@@ -1,10 +1,15 @@
 package com.liang.myapplication
 
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.liang.myapplication.PermissionUtil.PermissionName
+import com.liang.myapplication.PermissionUtil.PermissionUtil
 import com.liang.myapplication.log.LogCatControl
 import com.liang.myapplication.log.SaveHttpLog
 import java.util.*
@@ -17,7 +22,49 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        SaveHttpLog().init(this)
+        PermissionUtil().initPerMission(this,
+            mutableListOf(
+                PermissionName.READ_EXTERNAL_STORAGE,
+                PermissionName.WRITE_EXTERNAL_STORAGE,
+                PermissionName.CAMERA,
+                PermissionName.ACCESS_COARSE_LOCATION
+            ),
+            "权限提示",
+            "确认",
+            "取消"
+        ) {
+        }
+
+
+    }
+
+    override fun onRequestPermissionsResult(
+        requestCode: Int,
+        permissions: Array<out String>,
+        grantResults: IntArray
+    ) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        when (requestCode) {
+            PermissionUtil.PermissionRequestCode -> {
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                    if (grantResults.size > 0) {
+                        for (item in grantResults) {
+                            when (item) {
+                                PackageManager.PERMISSION_GRANTED -> {
+                                    Toast.makeText(this@MainActivity, "权限获取成功", Toast.LENGTH_SHORT)
+                                        .show();
+                                }
+                                PackageManager.PERMISSION_DENIED -> {
+                                    Toast.makeText(this@MainActivity, "权限获取失败", Toast.LENGTH_SHORT)
+                                        .show();
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
     }
 
     /**
@@ -52,6 +99,10 @@ class MainActivity : AppCompatActivity() {
         LogCatControl.getBuilder(this).setSearchContent("search").show()
     }
 
+    fun showDialog(view:View?){
+        startActivity(Intent(this,MainActivity4::class.java))
+//        DialogUtil.showDialog(mContext = this)
+    }
 
     /**
      * 自定义tag

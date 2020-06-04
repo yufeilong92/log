@@ -5,6 +5,7 @@ import android.content.ContentValues.TAG
 import android.util.Log
 import com.liang.myapplication.crashmonitor.MCrashMonitor
 import com.liang.myapplication.crashmonitor.listener.MCrashCallBack
+import com.liang.myapplication.log.SaveHttpLog
 import java.io.File
 
 /**
@@ -23,6 +24,7 @@ class BaseApllication:Application() {
         super.onCreate()
         myApplication=this
         initCrashMonitor()
+        SaveHttpLog().init(this)
     }
 
     fun getInstance():BaseApllication? {
