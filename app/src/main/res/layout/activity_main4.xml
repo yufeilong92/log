@@ -51,4 +51,12 @@
         android:id="@+id/iv_show"
         android:layout_height="wrap_content"/>
 
+    <com.liang.myapplication.view.SearchText
+        android:layout_width="match_parent"
+        app:clearImgRes="@mipmap/x"
+        android:id="@+id/search_text"
+        app:drawableRes="@drawable/gm_30_gree"
+        app:textSearchColor="@color/colorPrimary"
+        android:layout_height="40dp"/>
+
 </LinearLayout>

@@ -88,4 +88,11 @@
 
     </declare-styleable>
 
+    <declare-styleable name="SearchText">
+        <attr name="drawableRes" format="reference"/>
+        <attr name="clearImgRes" format="reference"/>
+        <attr name="textSearchColor" format="color"/>
+
+    </declare-styleable>
+
 </resources>

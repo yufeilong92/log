@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import com.donkingliang.imageselector.utils.ImageSelector
 import kotlinx.android.synthetic.main.activity_main4.*
 import java.util.ArrayList
@@ -73,6 +74,9 @@ class MainActivity4 : AppCompatActivity() {
             Log.e("==", "")
         }
         btn_seven.setOnClickListener(function)
+        search_text.setEditoAcitonListener {
+            Toast.makeText(this@MainActivity4, "$it", Toast.LENGTH_SHORT).show();
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
