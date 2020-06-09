@@ -94,5 +94,11 @@
         <attr name="textSearchColor" format="color"/>
 
     </declare-styleable>
-
+    <declare-styleable name="CustomMarqueeView">
+        <attr name="customScrollSpeed">
+            <enum name="fast" value="9" />
+            <enum name="medium" value="6" />
+            <enum name="slow" value="3" />
+        </attr>
+    </declare-styleable>
 </resources>

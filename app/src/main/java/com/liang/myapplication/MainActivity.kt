@@ -140,7 +140,7 @@ class MainActivity : AppCompatActivity() {
      * @param view
      */
     fun onStart(view: View?) {
-        startActivity(Intent(this, MainActivity2::class.java))
+        startActivity(Intent(this, MainActivity5::class.java))
     }
 
     /**
